@@ -7,6 +7,8 @@ import VideoList from './components/videoList';
 
 import YTSearch from 'youtube-api-search';
 
+import _ from 'lodash';
+
 const YOUTUBE_API_KEY = 'AIzaSyA5g-EqcIY_lMcfkyLg2vGJAlPVIKDvoVA';
 
 class App extends Component {
@@ -37,9 +39,12 @@ class App extends Component {
       return 'Loading...';
     }
     
+    const searchWithInterval = _.debounce( (term) => { this.searchVideos(term) }, 500 );
+
     return (
       <div>
-        <SearchBar searchTerm={term => this.searchVideos({term})} />
+        {/* <SearchBar searchTerm={term => this.searchVideos({term})} /> */}
+        <SearchBar searchTerm={searchWithInterval} />
         <SelectedVideo video={this.state.selectedVideo} />
         <VideoList
           selectVideo={selectedVideo => this.setState({selectedVideo})}
