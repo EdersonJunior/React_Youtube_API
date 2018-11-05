@@ -11,8 +11,12 @@
     }
 
     .list-videos {                
-        margin-left: 18%;
+        margin-left: 50%;
         width: 60%;
+    }
+
+    .list-group {
+        margin-top: -30%;
     }
 }
 
