@@ -1,22 +1,22 @@
 .input-group {
     width: 40%;
-    left: 26%;
+    left: 18%;
     margin-top: 1%;
 }
 
 @media screen and (min-width: 600px) {
     .videoshow {
-        margin-left: 26%;
+        margin-left: 18%;
         margin-top: 2%;
     }
 
     .list-videos {                
-        margin-left: 50%;
+        margin-left: 40%;
         width: 60%;
     }
 
     .list-group {
-        margin-top: -30%;
+        margin-top: -34%;
     }
 }
 
